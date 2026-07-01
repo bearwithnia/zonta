@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:wght@300;400;500;600&family=Imperial+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -35,6 +35,7 @@
       --soft-white: #fff7f3;
       --text-dark: #2d0708;
       --gold: #c8a04d;
+      --rose-script: #f0a1aa;
     }
 
     * {
@@ -87,6 +88,91 @@
       width: 100%;
       position: relative;
       z-index: 2;
+    }
+
+    .music-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(43, 5, 7, 0.72);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .music-box {
+      width: 100%;
+      max-width: 340px;
+      background: var(--blush-light);
+      color: var(--text-dark);
+      border-radius: 28px;
+      padding: 38px 26px;
+      text-align: center;
+      box-shadow: 0 24px 45px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 247, 243, 0.7);
+    }
+
+    .music-small {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .music-box h2 {
+      font-family: "Bodoni Moda", serif;
+      font-size: 36px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .music-box p {
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    .music-box button,
+    .music-toggle {
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .music-box button {
+      width: 100%;
+      padding: 14px 18px;
+      margin-top: 10px;
+      background: var(--burgundy-main);
+      color: var(--cream);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .music-box .no-music {
+      background: transparent;
+      color: var(--text-dark);
+      border: 1px solid rgba(45, 7, 8, 0.35);
+    }
+
+    .music-toggle {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 999;
+      display: none;
+      background: rgba(67, 10, 11, 0.92);
+      color: var(--cream);
+      padding: 12px 17px;
+      border: 1px solid rgba(246, 229, 225, 0.45);
+      font-size: 14px;
+      backdrop-filter: blur(8px);
     }
 
     .hero {
@@ -172,31 +258,34 @@
     }
 
     .script-title {
-      font-family: "Imperial Script", cursive;
-      font-size: clamp(58px, 17vw, 82px);
-      line-height: 0.7;
+      font-family: "Pinyon Script", cursive;
+      font-size: clamp(64px, 18vw, 96px);
+      line-height: 0.72;
       font-weight: 400;
-      color: var(--blush-light);
-      margin-bottom: 6px;
+      color: var(--rose-script);
+      margin-bottom: -6px;
+      text-shadow: 3px 4px 0 rgba(31, 4, 5, 0.65);
     }
 
     .script-subtitle {
-      font-family: "Imperial Script", cursive;
-      font-size: clamp(52px, 15vw, 74px);
-      line-height: 0.75;
+      font-family: "Pinyon Script", cursive;
+      font-size: clamp(48px, 14vw, 72px);
+      line-height: 0.72;
       font-weight: 400;
-      color: var(--blush-light);
-      margin-bottom: 24px;
+      color: var(--rose-script);
+      margin-bottom: 26px;
+      text-shadow: 2px 3px 0 rgba(31, 4, 5, 0.65);
     }
 
     .serif-title {
       font-family: "Bodoni Moda", serif;
-      font-size: clamp(43px, 12vw, 64px);
-      line-height: 0.9;
+      font-size: clamp(48px, 13vw, 74px);
+      line-height: 0.86;
       font-weight: 500;
-      letter-spacing: -1.2px;
+      letter-spacing: -1.8px;
       text-transform: uppercase;
-      color: var(--cream);
+      color: #fff7f3;
+      text-shadow: 2px 3px 0 rgba(31, 4, 5, 0.55);
     }
 
     .subtext {
@@ -355,11 +444,12 @@
     }
 
     .theme-script {
-      font-family: "Imperial Script", cursive;
+      font-family: "Pinyon Script", cursive;
       font-size: clamp(78px, 23vw, 112px);
       line-height: 0.72;
       font-weight: 400;
-      color: var(--blush-light);
+      color: var(--rose-script);
+      text-shadow: 3px 4px 0 rgba(31, 4, 5, 0.55);
     }
 
     .theme-title {
@@ -371,6 +461,7 @@
       letter-spacing: -2px;
       color: var(--cream);
       margin-top: 10px;
+      text-shadow: 2px 3px 0 rgba(31, 4, 5, 0.45);
     }
 
     .theme-copy {
@@ -399,11 +490,12 @@
     }
 
     .big-script {
-      font-family: "Imperial Script", cursive;
+      font-family: "Pinyon Script", cursive;
       font-size: clamp(74px, 21vw, 100px);
       line-height: 0.72;
-      color: var(--blush-light);
+      color: var(--rose-script);
       font-weight: 400;
+      text-shadow: 3px 4px 0 rgba(31, 4, 5, 0.5);
     }
 
     .big-serif {
@@ -570,6 +662,7 @@
 
     .rsvp-card .big-script {
       color: var(--text-dark);
+      text-shadow: none;
     }
 
     .rsvp-card .big-serif {
@@ -665,6 +758,25 @@
 
 <body>
   <main class="site">
+
+    <div class="music-popup" id="musicPopup">
+      <div class="music-box">
+        <p class="music-small">Welcome</p>
+        <h2>Enter with Music</h2>
+        <p>Tap below to begin the invitation with background music.</p>
+
+        <button onclick="startMusic()">♫ Enter with Music</button>
+        <button class="no-music" onclick="closeMusicPopup()">Continue Without Music</button>
+      </div>
+    </div>
+
+    <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">
+      ♫ Music
+    </button>
+
+    <audio id="bgMusic" loop preload="auto">
+      <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
 
     <section class="section hero">
       <div class="inner">
@@ -832,5 +944,41 @@
     </footer>
 
   </main>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const musicPopup = document.getElementById("musicPopup");
+    const musicToggle = document.getElementById("musicToggle");
+
+    function startMusic() {
+      music.volume = 0.45;
+
+      music.play().then(function () {
+        musicPopup.style.display = "none";
+        musicToggle.style.display = "block";
+        musicToggle.textContent = "♫ Pause";
+      }).catch(function () {
+        musicPopup.style.display = "none";
+        musicToggle.style.display = "block";
+        musicToggle.textContent = "♫ Music";
+      });
+    }
+
+    function closeMusicPopup() {
+      musicPopup.style.display = "none";
+      musicToggle.style.display = "block";
+      musicToggle.textContent = "♫ Music";
+    }
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicToggle.textContent = "♫ Pause";
+      } else {
+        music.pause();
+        musicToggle.textContent = "♫ Music";
+      }
+    }
+  </script>
 </body>
 </html>
