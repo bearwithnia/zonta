@@ -6,6 +6,19 @@
 
   <title>Zonta Club of Isabela Invitation</title>
 
+  <meta name="description" content="You are cordially invited to the Zonta Club of Isabela Turnover Ceremony, Installation of New Officers, and Induction of New Members.">
+
+  <meta property="og:title" content="Zonta Club of Isabela Invitation">
+  <meta property="og:description" content="Turnover Ceremony, Installation of New Officers, and Induction of New Members. August 15, 4:00 PM at Amphitheater, Provincial Capitol, City of Ilagan, Isabela.">
+  <meta property="og:image" content="https://bearwithnia.github.io/zonta/preview.png">
+  <meta property="og:url" content="https://bearwithnia.github.io/zonta/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zonta Club of Isabela Invitation">
+  <meta name="twitter:description" content="Turnover Ceremony, Installation of New Officers, and Induction of New Members.">
+  <meta name="twitter:image" content="https://bearwithnia.github.io/zonta/preview.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:wght@300;400;500;600&family=Imperial+Script&display=swap" rel="stylesheet">
@@ -99,18 +112,6 @@
       pointer-events: none;
     }
 
-    .top-cut {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 180px;
-      height: 42px;
-      transform: translateX(-50%);
-      background: var(--bg-gray);
-      border-radius: 0 0 25px 25px;
-      z-index: 3;
-    }
-
     .year-row {
       display: flex;
       justify-content: space-between;
@@ -172,11 +173,20 @@
 
     .script-title {
       font-family: "Imperial Script", cursive;
-      font-size: clamp(68px, 20vw, 96px);
-      line-height: 0.68;
+      font-size: clamp(58px, 17vw, 82px);
+      line-height: 0.7;
       font-weight: 400;
       color: var(--blush-light);
-      margin-bottom: 18px;
+      margin-bottom: 6px;
+    }
+
+    .script-subtitle {
+      font-family: "Imperial Script", cursive;
+      font-size: clamp(52px, 15vw, 74px);
+      line-height: 0.75;
+      font-weight: 400;
+      color: var(--blush-light);
+      margin-bottom: 24px;
     }
 
     .serif-title {
@@ -364,10 +374,10 @@
     }
 
     .theme-copy {
-      max-width: 340px;
-      margin: 28px auto 0;
-      font-size: 19px;
-      line-height: 1.24;
+      max-width: 330px;
+      margin: 22px auto 0;
+      font-size: 18px;
+      line-height: 1.2;
       color: rgba(246, 229, 225, 0.9);
     }
 
@@ -376,7 +386,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-top: 34px;
+      margin-top: 24px;
     }
 
     .theme-tags span {
@@ -657,8 +667,6 @@
   <main class="site">
 
     <section class="section hero">
-      <div class="top-cut"></div>
-
       <div class="inner">
         <div class="year-row">
           <span>20</span>
@@ -673,12 +681,14 @@
 
         <p class="eyebrow">You Are Cordially Invited To</p>
 
-        <h1 class="script-title">Zonta</h1>
+        <h1 class="script-title">Zonta Club</h1>
 
-        <h2 class="serif-title">
+        <h2 class="script-subtitle">of Isabela</h2>
+
+        <h3 class="serif-title">
           Turnover<br>
           Ceremony
-        </h2>
+        </h3>
 
         <p class="subtext">
           Installation of New Officers and Induction of New Members
