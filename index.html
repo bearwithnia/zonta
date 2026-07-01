@@ -21,6 +21,7 @@
       --cream: #f6e5e1;
       --soft-white: #fff7f3;
       --text-dark: #2d0708;
+      --gold: #c8a04d;
     }
 
     * {
@@ -325,15 +326,64 @@
       background: currentColor;
     }
 
-    .panel {
-      width: 100%;
-      max-width: 370px;
-      margin: 0 auto;
-      padding: 50px 24px;
-      border-radius: 28px;
-      background: var(--burgundy-deep);
-      border: 1px solid rgba(231, 196, 199, 0.35);
-      box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+    .theme-section {
+      background:
+        radial-gradient(circle at 50% 14%, rgba(231, 196, 199, 0.12), transparent 28%),
+        var(--burgundy-main);
+      color: var(--cream);
+      min-height: 92vh;
+    }
+
+    .theme-label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      color: rgba(246, 229, 225, 0.86);
+    }
+
+    .theme-script {
+      font-family: "Imperial Script", cursive;
+      font-size: clamp(78px, 23vw, 112px);
+      line-height: 0.72;
+      font-weight: 400;
+      color: var(--blush-light);
+    }
+
+    .theme-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(54px, 15vw, 78px);
+      line-height: 0.9;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: -2px;
+      color: var(--cream);
+      margin-top: 10px;
+    }
+
+    .theme-copy {
+      max-width: 340px;
+      margin: 28px auto 0;
+      font-size: 19px;
+      line-height: 1.24;
+      color: rgba(246, 229, 225, 0.9);
+    }
+
+    .theme-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 34px;
+    }
+
+    .theme-tags span {
+      border: 1px solid rgba(231, 196, 199, 0.5);
+      border-radius: 999px;
+      padding: 10px 15px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .big-script {
@@ -360,21 +410,6 @@
       font-size: 21px;
       line-height: 1.18;
       color: rgba(246, 229, 225, 0.9);
-    }
-
-    .pills {
-      display: grid;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .pill {
-      padding: 13px 18px;
-      border: 1px solid rgba(231, 196, 199, 0.5);
-      border-radius: 999px;
-      font-size: 17px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
     }
 
     .dress-section {
@@ -493,6 +528,10 @@
 
     .black {
       background: #030303;
+    }
+
+    .gold {
+      background: var(--gold);
     }
 
     .rsvp-card {
@@ -679,29 +718,28 @@
       </div>
     </section>
 
-    <section class="section burgundy-section">
+    <section class="section theme-section">
       <div class="inner">
-        <div class="panel">
-          <p class="big-script">An Evening</p>
+        <p class="theme-label">The Evening</p>
 
-          <div class="ornament">
-            <span></span>
-          </div>
+        <h2 class="theme-script">An Evening</h2>
 
-          <h2 class="big-serif">
-            Of Elegance<br>
-            And Service
-          </h2>
+        <h3 class="theme-title">
+          Of Grace
+        </h3>
 
-          <p class="body-copy">
-            Join us for an evening of elegance, prestige, and celebration as we honor our distinguished inductees on the red carpet.
-          </p>
+        <div class="ornament">
+          <span></span>
+        </div>
 
-          <div class="pills">
-            <div class="pill">Cocktails</div>
-            <div class="pill">Ceremony</div>
-            <div class="pill">Gala Dinner</div>
-          </div>
+        <p class="theme-copy">
+          Join us for an evening of ceremony and celebration as we welcome our incoming officers and new members, united in service, equity, inclusion, and the vision of a better world for women and girls.
+        </p>
+
+        <div class="theme-tags">
+          <span>Cocktails</span>
+          <span>Ceremony</span>
+          <span>Gala Dinner</span>
         </div>
       </div>
     </section>
@@ -716,21 +754,26 @@
           </div>
 
           <h2 class="big-serif">
-            Formal<br>
-            Evening
+            Hollywood<br>
+            Glam
           </h2>
 
           <div class="champagne"></div>
 
           <div class="dress-list">
             <div class="dress-item">
-              <strong><span class="color-dot green"></span>Officers and Members</strong>
-              Green formal or cocktail attire
+              <strong><span class="color-dot green"></span>Officers</strong>
+              Green Hollywood Glam attire
             </div>
 
             <div class="dress-item">
               <strong><span class="color-dot black"></span>New Members</strong>
-              Black formal or cocktail attire
+              Black Hollywood Glam attire
+            </div>
+
+            <div class="dress-item">
+              <strong><span class="color-dot gold"></span>Members</strong>
+              Any Hollywood Glam color except black and green
             </div>
           </div>
         </div>
