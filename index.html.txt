@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Zonta Club of Isabela Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Cormorant+Garamond:wght@300;400;500;600&family=Imperial+Script&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-gray: #8d948b;
+      --burgundy-deep: #300708;
+      --burgundy-main: #430a0b;
+      --burgundy-light: #5a1011;
+      --blush: #d8b0b4;
+      --blush-light: #e7c4c7;
+      --cream: #f6e5e1;
+      --soft-white: #fff7f3;
+      --text-dark: #2d0708;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-gray);
+      color: var(--cream);
+      font-family: "Cormorant Garamond", serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      background: var(--burgundy-main);
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .section {
+      min-height: 100vh;
+      padding: 64px 26px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .inner {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(32, 4, 5, 0.26), rgba(32, 4, 5, 0.62)),
+        repeating-linear-gradient(
+          105deg,
+          #2b0607 0px,
+          #4e0b0d 38px,
+          #250405 78px
+        );
+      border-radius: 0 0 36px 36px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255, 240, 220, 0.1), transparent 20%),
+        radial-gradient(circle at 52% 45%, rgba(255, 210, 210, 0.08), transparent 32%);
+      pointer-events: none;
+    }
+
+    .top-cut {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 180px;
+      height: 42px;
+      transform: translateX(-50%);
+      background: var(--bg-gray);
+      border-radius: 0 0 25px 25px;
+      z-index: 3;
+    }
+
+    .year-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 240px;
+      margin: 0 auto 8px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--cream);
+    }
+
+    .logo-frame {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 38px;
+      border: 1px solid rgba(246, 229, 225, 0.8);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-frame::before,
+    .logo-frame::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 1px;
+      background: rgba(246, 229, 225, 0.8);
+      top: 50%;
+    }
+
+    .logo-frame::before {
+      left: -22px;
+    }
+
+    .logo-frame::after {
+      right: -22px;
+    }
+
+    .logo-box {
+      width: 72px;
+      height: 72px;
+      background: var(--cream);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 18px;
+    }
+
+    .script-title {
+      font-family: "Imperial Script", cursive;
+      font-size: clamp(68px, 20vw, 96px);
+      line-height: 0.68;
+      font-weight: 400;
+      color: var(--blush-light);
+      margin-bottom: 18px;
+    }
+
+    .serif-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(43px, 12vw, 64px);
+      line-height: 0.9;
+      font-weight: 500;
+      letter-spacing: -1.2px;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+
+    .subtext {
+      max-width: 330px;
+      margin: 34px auto 0;
+      font-size: 18px;
+      letter-spacing: 2px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      color: rgba(246, 229, 225, 0.9);
+    }
+
+    .blush-section {
+      background: var(--blush);
+      color: var(--text-dark);
+    }
+
+    .burgundy-section {
+      background: var(--burgundy-main);
+      color: var(--cream);
+    }
+
+    .arch-card {
+      width: 100%;
+      max-width: 350px;
+      min-height: 610px;
+      margin: 0 auto;
+      padding: 86px 24px 46px;
+      background: var(--blush-light);
+      color: var(--text-dark);
+      border-radius: 185px 185px 18px 18px;
+      position: relative;
+      box-shadow: 0 22px 34px rgba(43, 7, 8, 0.28);
+    }
+
+    .arch-card::before {
+      content: "";
+      position: absolute;
+      inset: 15px;
+      border: 1px solid rgba(45, 7, 8, 0.45);
+      border-radius: 170px 170px 14px 14px;
+      pointer-events: none;
+    }
+
+    .side-label {
+      position: absolute;
+      top: 220px;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+
+    .side-left {
+      left: 28px;
+    }
+
+    .side-right {
+      right: 28px;
+    }
+
+    .date-number {
+      font-family: "Bodoni Moda", serif;
+      font-size: 88px;
+      line-height: 0.82;
+      font-weight: 500;
+      letter-spacing: -3px;
+      margin-bottom: 38px;
+    }
+
+    .date-number span {
+      display: block;
+    }
+
+    .date-time {
+      font-size: 72px;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+
+    .small-caps {
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .venue {
+      font-family: "Bodoni Moda", serif;
+      font-size: 29px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .address {
+      font-size: 16px;
+      letter-spacing: 2px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .ornament {
+      width: 46px;
+      height: 15px;
+      margin: 24px auto;
+      position: relative;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.6;
+    }
+
+    .ornament::before {
+      left: 0;
+    }
+
+    .ornament::after {
+      right: 0;
+    }
+
+    .ornament span {
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: currentColor;
+    }
+
+    .panel {
+      width: 100%;
+      max-width: 370px;
+      margin: 0 auto;
+      padding: 50px 24px;
+      border-radius: 28px;
+      background: var(--burgundy-deep);
+      border: 1px solid rgba(231, 196, 199, 0.35);
+      box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .big-script {
+      font-family: "Imperial Script", cursive;
+      font-size: clamp(74px, 21vw, 100px);
+      line-height: 0.72;
+      color: var(--blush-light);
+      font-weight: 400;
+    }
+
+    .big-serif {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(43px, 12vw, 62px);
+      line-height: 0.92;
+      font-weight: 500;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+
+    .body-copy {
+      max-width: 330px;
+      margin: 26px auto 0;
+      font-size: 21px;
+      line-height: 1.18;
+      color: rgba(246, 229, 225, 0.9);
+    }
+
+    .pills {
+      display: grid;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .pill {
+      padding: 13px 18px;
+      border: 1px solid rgba(231, 196, 199, 0.5);
+      border-radius: 999px;
+      font-size: 17px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .dress-section {
+      background:
+        linear-gradient(
+          to bottom,
+          var(--burgundy-main) 0%,
+          var(--burgundy-main) 45%,
+          var(--blush) 45%,
+          var(--blush) 100%
+        );
+      color: var(--cream);
+      overflow: hidden;
+    }
+
+    .dress-card {
+      width: 100%;
+      max-width: 370px;
+      margin: 0 auto;
+      padding: 52px 22px;
+      background:
+        linear-gradient(
+          to bottom,
+          #3a0708 0%,
+          #45090b 46%,
+          var(--blush) 46%,
+          var(--blush) 100%
+        );
+      border-radius: 28px;
+      border: 1px solid rgba(231, 196, 199, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dress-card .big-script,
+    .dress-card .big-serif {
+      position: relative;
+      z-index: 2;
+    }
+
+    .dress-card .big-serif {
+      margin-top: 24px;
+    }
+
+    .champagne {
+      width: 250px;
+      height: 170px;
+      margin: 36px auto 22px;
+      position: relative;
+      opacity: 0.85;
+    }
+
+    .champagne::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 220px;
+      height: 88px;
+      transform: translateX(-50%);
+      border-radius: 0 0 110px 110px;
+      border: 8px solid rgba(255, 247, 243, 0.55);
+      border-top: none;
+      box-shadow: inset 0 -28px 0 rgba(91, 20, 23, 0.45);
+    }
+
+    .champagne::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 84px;
+      width: 9px;
+      height: 82px;
+      transform: translateX(-50%);
+      background: rgba(255, 247, 243, 0.48);
+      box-shadow: 0 80px 0 46px rgba(255, 247, 243, 0.22);
+    }
+
+    .dress-list {
+      display: grid;
+      gap: 12px;
+      position: relative;
+      z-index: 2;
+      color: var(--text-dark);
+      margin-top: 20px;
+    }
+
+    .dress-item {
+      background: rgba(255, 247, 243, 0.38);
+      border-radius: 999px;
+      padding: 14px 16px;
+      font-size: 17px;
+      line-height: 1.12;
+    }
+
+    .dress-item strong {
+      display: block;
+      font-family: "Bodoni Moda", serif;
+      text-transform: uppercase;
+      font-size: 19px;
+      margin-bottom: 3px;
+    }
+
+    .color-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .green {
+      background: #416331;
+    }
+
+    .black {
+      background: #030303;
+    }
+
+    .rsvp-card {
+      width: 100%;
+      max-width: 350px;
+      min-height: 510px;
+      margin: 0 auto;
+      padding: 80px 24px 46px;
+      background: var(--blush-light);
+      color: var(--text-dark);
+      border-radius: 185px 185px 18px 18px;
+      box-shadow: 0 22px 34px rgba(43, 7, 8, 0.28);
+      position: relative;
+    }
+
+    .rsvp-card::before {
+      content: "";
+      position: absolute;
+      inset: 15px;
+      border: 1px solid rgba(45, 7, 8, 0.45);
+      border-radius: 170px 170px 14px 14px;
+      pointer-events: none;
+    }
+
+    .rsvp-card .big-script {
+      color: var(--text-dark);
+    }
+
+    .rsvp-card .big-serif {
+      color: var(--text-dark);
+      margin-top: 20px;
+    }
+
+    .rsvp-card .body-copy {
+      color: var(--text-dark);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 34px;
+      min-width: 205px;
+      min-height: 54px;
+      padding: 15px 28px;
+      border-radius: 999px;
+      background: var(--burgundy-main);
+      color: var(--cream);
+      font-size: 17px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .footer {
+      min-height: auto;
+      padding: 50px 24px;
+      background: var(--burgundy-deep);
+    }
+
+    .footer-logo {
+      width: 64px;
+      margin: 0 auto 18px;
+      background: var(--cream);
+      padding: 7px;
+    }
+
+    .footer-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+
+    .footer p {
+      font-size: 17px;
+      color: rgba(246, 229, 225, 0.82);
+      line-height: 1.2;
+    }
+
+    @media (max-width: 380px) {
+      .section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .arch-card,
+      .rsvp-card {
+        max-width: 320px;
+      }
+
+      .date-number {
+        font-size: 80px;
+      }
+
+      .date-time {
+        font-size: 66px;
+      }
+
+      .side-left {
+        left: 22px;
+      }
+
+      .side-right {
+        right: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="site">
+
+    <section class="section hero">
+      <div class="top-cut"></div>
+
+      <div class="inner">
+        <div class="year-row">
+          <span>20</span>
+          <span>26</span>
+        </div>
+
+        <div class="logo-frame">
+          <div class="logo-box">
+            <img src="ZONTA logo.png" alt="Zonta Club of Isabela Logo">
+          </div>
+        </div>
+
+        <p class="eyebrow">You Are Cordially Invited To</p>
+
+        <h1 class="script-title">Zonta</h1>
+
+        <h2 class="serif-title">
+          Turnover<br>
+          Ceremony
+        </h2>
+
+        <p class="subtext">
+          Installation of New Officers and Induction of New Members
+        </p>
+      </div>
+    </section>
+
+    <section class="section blush-section">
+      <div class="inner">
+        <div class="arch-card">
+          <span class="side-label side-left">Date</span>
+          <span class="side-label side-right">Time</span>
+
+          <div class="date-number">
+            <span>08</span>
+            <span>15</span>
+            <span class="date-time">4PM</span>
+          </div>
+
+          <p class="small-caps">Saturday</p>
+
+          <p class="small-caps">Venue</p>
+
+          <h2 class="venue">
+            Amphitheater
+          </h2>
+
+          <p class="address">
+            Provincial Capitol<br>
+            City of Ilagan, Isabela
+          </p>
+
+          <div class="ornament">
+            <span></span>
+          </div>
+
+          <p class="small-caps">Welcome</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section burgundy-section">
+      <div class="inner">
+        <div class="panel">
+          <p class="big-script">An Evening</p>
+
+          <div class="ornament">
+            <span></span>
+          </div>
+
+          <h2 class="big-serif">
+            Of Elegance<br>
+            And Service
+          </h2>
+
+          <p class="body-copy">
+            Join us for an evening of elegance, prestige, and celebration as we honor our distinguished inductees on the red carpet.
+          </p>
+
+          <div class="pills">
+            <div class="pill">Cocktails</div>
+            <div class="pill">Ceremony</div>
+            <div class="pill">Gala Dinner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dress-section">
+      <div class="inner">
+        <div class="dress-card">
+          <p class="big-script">Dress Code</p>
+
+          <div class="ornament">
+            <span></span>
+          </div>
+
+          <h2 class="big-serif">
+            Formal<br>
+            Evening
+          </h2>
+
+          <div class="champagne"></div>
+
+          <div class="dress-list">
+            <div class="dress-item">
+              <strong><span class="color-dot green"></span>Officers and Members</strong>
+              Green formal or cocktail attire
+            </div>
+
+            <div class="dress-item">
+              <strong><span class="color-dot black"></span>New Members</strong>
+              Black formal or cocktail attire
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section burgundy-section">
+      <div class="inner">
+        <div class="rsvp-card">
+          <p class="big-script">Kindly</p>
+
+          <div class="ornament">
+            <span></span>
+          </div>
+
+          <h2 class="big-serif">
+            Confirm<br>
+            RSVP
+          </h2>
+
+          <p class="body-copy">
+            Please confirm your attendance through the registration form.
+          </p>
+
+          <a class="button" href="https://forms.gle/HbPpwW7zkog8bYWJ9" target="_blank" rel="noopener">
+            RSVP Here
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section footer">
+      <div class="inner">
+        <img class="footer-logo" src="ZONTA logo.png" alt="Zonta Club of Isabela Logo">
+
+        <h2 class="footer-title">Zonta Club of Isabela</h2>
+
+        <p>
+          Turnover Ceremony<br>
+          Installation of New Officers<br>
+          Induction of New Members
+        </p>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
