@@ -6,10 +6,10 @@
 
   <title>Zonta Club of Isabela Invitation</title>
 
-  <meta name="description" content="You are cordially invited to the Zonta Club of Isabela Turnover Ceremony, Installation of New Officers, and Induction of New Members.">
+  <meta name="description" content="You are cordially invited to the Zonta Club of Isabela Installation of New Officers, Induction of New Members, and Turnover Ceremony.">
 
   <meta property="og:title" content="Zonta Club of Isabela Invitation">
-  <meta property="og:description" content="Turnover Ceremony, Installation of New Officers, and Induction of New Members. August 15, 4:00 PM at Amphitheater, Provincial Capitol, City of Ilagan, Isabela.">
+  <meta property="og:description" content="Installation of New Officers and Induction of New Members. August 15, 2026 at Amphitheater, Provincial Capitol, City of Ilagan, Isabela.">
   <meta property="og:image" content="https://bearwithnia.github.io/zonta/preview.png">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
@@ -18,7 +18,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Zonta Club of Isabela Invitation">
-  <meta name="twitter:description" content="Turnover Ceremony, Installation of New Officers, and Induction of New Members.">
+  <meta name="twitter:description" content="Installation of New Officers and Induction of New Members.">
   <meta name="twitter:image" content="https://bearwithnia.github.io/zonta/preview.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,14 +30,13 @@
       --bg-ivory: #f4ead8;
       --burgundy-deep: #2b0507;
       --burgundy-main: #4a0709;
-      --burgundy-light: #6b1416;
+      --burgundy-dark: #300607;
       --ivory: #fff0d7;
       --cream: #fff7e8;
       --soft-white: #fffaf0;
       --text-dark: #3a0908;
       --gold: #c89b3c;
       --gold-light: #e4c36a;
-      --gold-soft: #f1d889;
     }
 
     * {
@@ -263,41 +262,77 @@
       font-weight: 600;
     }
 
-    .script-title {
-      font-family: "Pinyon Script", cursive;
-      font-size: clamp(64px, 18vw, 96px);
-      line-height: 0.72;
-      font-weight: 400;
-      color: var(--gold-light);
-      margin-bottom: -6px;
-      text-shadow: 3px 4px 0 rgba(31, 4, 5, 0.65);
-    }
-
-    .script-subtitle {
-      font-family: "Pinyon Script", cursive;
-      font-size: clamp(48px, 14vw, 72px);
-      line-height: 0.72;
-      font-weight: 400;
-      color: var(--gold-light);
-      margin-bottom: 26px;
-      text-shadow: 2px 3px 0 rgba(31, 4, 5, 0.65);
-    }
-
-    .serif-title {
+    .club-title {
       font-family: "Bodoni Moda", serif;
-      font-size: clamp(48px, 13vw, 74px);
-      line-height: 0.86;
-      font-weight: 500;
-      letter-spacing: -1.8px;
+      font-size: clamp(60px, 17vw, 88px);
+      line-height: 0.9;
+      font-weight: 600;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--soft-white);
+      color: var(--gold-light);
       text-shadow: 2px 3px 0 rgba(31, 4, 5, 0.55);
     }
 
-    .subtext {
-      max-width: 330px;
-      margin: 34px auto 0;
-      font-size: 18px;
+    .club-subtitle {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(27px, 7vw, 38px);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-top: 6px;
+    }
+
+    .mini-divider {
+      width: 42%;
+      margin: 20px auto 18px;
+    }
+
+    .installation-script {
+      font-family: "Pinyon Script", cursive;
+      font-size: clamp(62px, 18vw, 92px);
+      line-height: 0.76;
+      font-weight: 400;
+      color: var(--gold-light);
+      text-shadow: 3px 4px 0 rgba(31, 4, 5, 0.6);
+      margin-top: 12px;
+    }
+
+    .installation-serif {
+      font-family: "Bodoni Moda", serif;
+      font-size: clamp(35px, 10vw, 54px);
+      line-height: 0.92;
+      font-weight: 500;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      color: var(--soft-white);
+      text-shadow: 2px 3px 0 rgba(31, 4, 5, 0.55);
+      margin-bottom: 10px;
+    }
+
+    .event-divider {
+      width: 64%;
+      height: 1px;
+      background: var(--gold-light);
+      opacity: 0.85;
+      margin: 22px auto;
+    }
+
+    .smaller-event-title {
+      font-family: "Bodoni Moda", serif;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-top: 18px;
+    }
+
+    .event-subtitle {
+      max-width: 340px;
+      margin: 18px auto 0;
+      font-size: 17px;
       letter-spacing: 2px;
       line-height: 1.25;
       text-transform: uppercase;
@@ -327,6 +362,7 @@
       border-radius: 185px 185px 18px 18px;
       position: relative;
       box-shadow: 0 22px 34px rgba(43, 7, 8, 0.25);
+      overflow: hidden;
     }
 
     .arch-card::before {
@@ -336,6 +372,12 @@
       border: 1px solid rgba(200, 155, 60, 0.78);
       border-radius: 170px 170px 14px 14px;
       pointer-events: none;
+      z-index: 1;
+    }
+
+    .arch-card > * {
+      position: relative;
+      z-index: 2;
     }
 
     .side-label {
@@ -363,19 +405,12 @@
       line-height: 0.82;
       font-weight: 500;
       letter-spacing: -3px;
-      margin-bottom: 38px;
+      margin-bottom: 34px;
       color: var(--text-dark);
     }
 
     .date-number span {
       display: block;
-    }
-
-    .date-time {
-      font-size: 72px;
-      letter-spacing: -2px;
-      text-transform: uppercase;
-      color: var(--gold);
     }
 
     .small-caps {
@@ -402,6 +437,17 @@
       line-height: 1.25;
       text-transform: uppercase;
       color: var(--text-dark);
+    }
+
+    .yellow-rose {
+      position: absolute;
+      right: -14px;
+      bottom: -22px;
+      width: 150px;
+      opacity: 0.92;
+      transform: rotate(-8deg);
+      pointer-events: none;
+      z-index: 2;
     }
 
     .ornament {
@@ -763,8 +809,10 @@
         font-size: 80px;
       }
 
-      .date-time {
-        font-size: 66px;
+      .yellow-rose {
+        width: 125px;
+        right: -14px;
+        bottom: -18px;
       }
 
       .side-left {
@@ -813,19 +861,30 @@
           </div>
         </div>
 
-        <p class="eyebrow">You Are Cordially Invited To</p>
+        <p class="eyebrow">You Are Cordially Invited To The</p>
 
-        <h1 class="script-title">Zonta Club</h1>
+        <h1 class="club-title">Zonta</h1>
 
-        <h2 class="script-subtitle">of Isabela</h2>
+        <h2 class="club-subtitle">Club of Isabela</h2>
 
-        <h3 class="serif-title">
-          Turnover<br>
-          Ceremony
-        </h3>
+        <div class="event-divider mini-divider"></div>
 
-        <p class="subtext">
-          Installation of New Officers and Induction of New Members
+        <h3 class="installation-script">Installation</h3>
+
+        <p class="installation-serif">of New Officers</p>
+
+        <h3 class="installation-script">and Induction</h3>
+
+        <p class="installation-serif">of New Members</p>
+
+        <div class="event-divider"></div>
+
+        <p class="smaller-event-title">
+          Turnover Ceremony
+        </p>
+
+        <p class="event-subtitle">
+          Hollywood Glam Celebration
         </p>
       </div>
     </section>
@@ -834,15 +893,17 @@
       <div class="inner">
         <div class="arch-card">
           <span class="side-label side-left">Date</span>
-          <span class="side-label side-right">Time</span>
+          <span class="side-label side-right">Date</span>
 
           <div class="date-number">
             <span>08</span>
             <span>15</span>
-            <span class="date-time">4PM</span>
+            <span>26</span>
           </div>
 
           <p class="small-caps">Saturday</p>
+
+          <p class="small-caps">4:00 PM</p>
 
           <p class="small-caps">Venue</p>
 
@@ -860,6 +921,8 @@
           </div>
 
           <p class="small-caps">Welcome</p>
+
+          <img class="yellow-rose" src="yellow-rose-transparent.png" alt="">
         </div>
       </div>
     </section>
@@ -918,8 +981,8 @@
             </div>
 
             <div class="dress-item">
-              <strong><span class="color-dot gold"></span>Members</strong>
-              Any Hollywood Glam color except black and green
+              <strong><span class="color-dot gold"></span>Guests or Visitors</strong>
+              Any color except black and green in semi-formal attire
             </div>
           </div>
         </div>
@@ -958,9 +1021,9 @@
         <h2 class="footer-title">Zonta Club of Isabela</h2>
 
         <p>
-          Turnover Ceremony<br>
           Installation of New Officers<br>
-          Induction of New Members
+          Induction of New Members<br>
+          Turnover Ceremony
         </p>
       </div>
     </footer>
